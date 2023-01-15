@@ -7,7 +7,7 @@ import { computed, ref } from 'vue'
 
 const MIN_ARROWHEAD_STROKE_WIDTH = 2
 
-const strokeWidth = ref(2)
+const strokeWidth = ref(11)
 const widthMultiplier = ref(12)
 const heightMultiplier = ref(12)
 

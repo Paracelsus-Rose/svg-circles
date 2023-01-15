@@ -32,17 +32,17 @@ const circleAdjustments = ref<CircleAdjustments>({
 
 const filledCircleVals = computed(() => {
   const calcCyR = {
-    cy: parseFloat((dimensions.value.height / circleAdjustments.value.cYOffset).toFixed(2)) / strokeWidth.value * 2,
-    r: parseFloat((dimensions.value.width / circleAdjustments.value.radiusOffset).toFixed(2)) / strokeWidth.value * 2,
+    cy: parseFloat(((dimensions.value.height / circleAdjustments.value.cYOffset) / strokeWidth.value * 2).toFixed(2)),
+    r: parseFloat(((dimensions.value.width / circleAdjustments.value.radiusOffset) / strokeWidth.value * 2).toFixed(2)),
   }
 
   const target = {
-    cx: ((dimensions.value.width - circleAdjustments.value.targetCxOffset) / strokeWidth.value * 2) - strokeWidth.value,
+    cx: parseFloat((((dimensions.value.width - circleAdjustments.value.targetCxOffset) / strokeWidth.value * 2) - strokeWidth.value).toFixed(2)),
     ...calcCyR,
   }
 
   const destination = {
-    cx: ((dimensions.value.width - circleAdjustments.value.destinationCxOffset) / strokeWidth.value * 2) - strokeWidth.value,
+    cx: parseFloat((((dimensions.value.width - circleAdjustments.value.destinationCxOffset) / strokeWidth.value * 2) - strokeWidth.value).toFixed(2)),
     ...calcCyR,
   }
 
