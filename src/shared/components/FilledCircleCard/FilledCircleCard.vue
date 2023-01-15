@@ -24,8 +24,8 @@ const dimensions = useVModel(props, 'dimensions', emit)
 const strokeWidth = useVModel(props, 'strokeWidth', emit)
 
 const circleAdjustments = ref<CircleAdjustments>({
-  targetCxOffset: 10,
-  destinationCxOffset: 10,
+  targetCxOffset: 1.6,
+  destinationCxOffset: 1.6,
   cYOffset: 1.6,
   radiusOffset: 3.2,
 })
@@ -37,12 +37,12 @@ const filledCircleVals = computed(() => {
   }
 
   const target = {
-    cx: parseFloat(((dimensions.value.height / circleAdjustments.value.cYOffset) / strokeWidth.value * 2).toFixed(2)),
+    cx: parseFloat(((dimensions.value.height / circleAdjustments.value.targetCxOffset) / strokeWidth.value * 2).toFixed(2)),
     ...calcCyR,
   }
 
   const destination = {
-    cx: parseFloat(((dimensions.value.height / circleAdjustments.value.cYOffset) / strokeWidth.value * 2).toFixed(2)),
+    cx: parseFloat(((dimensions.value.height / circleAdjustments.value.destinationCxOffset) / strokeWidth.value * 2).toFixed(2)),
     ...calcCyR,
   }
 

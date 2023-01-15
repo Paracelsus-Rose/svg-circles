@@ -37,11 +37,11 @@ const circleVals = computed(() => {
   }
 
   const target = {
-    cx: parseFloat(((dimensions.value.height / circleAdjustments.value.cYOffset) / strokeWidth.value * 2).toFixed(2)),
+    cx: parseFloat(((dimensions.value.height / circleAdjustments.value.targetCxOffset) / strokeWidth.value * 2).toFixed(2)),
     ...calcCyR,
   }
   const destination = {
-    cx: parseFloat(((dimensions.value.height / circleAdjustments.value.cYOffset) / strokeWidth.value * 2).toFixed(2)),
+    cx: parseFloat(((dimensions.value.height / circleAdjustments.value.destinationCxOffset) / strokeWidth.value * 2).toFixed(2)),
     ...calcCyR,
   }
 
