@@ -1,6 +1,27 @@
 {
   "extends": "@quasar/app-vite/tsconfig-preset",
   "compilerOptions": {
-    "baseUrl": "."
+    "jsx": "preserve",
+    "lib": [
+      "ES2022"
+    ],
+    "target": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "paths": {
+      "models/*": [
+        "src/models/*"
+      ],
+      "types/*": [
+        "src/types/*"
+      ]
+    },
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "strictPropertyInitialization": false
   }
 }
