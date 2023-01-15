@@ -11,7 +11,6 @@ import ExpandCircleAdjustmentCard from '../ExpandCircleAdjustmentCard/ExpandCirc
 interface Props {
   dimensions: Dimensions
   strokeWidth: number
-  circleRenderVals: CircleRenderVals
 }
 
 const props = defineProps<Props>()
@@ -33,8 +32,8 @@ const circleAdjustments = ref<CircleAdjustments>({
 
 const circleVals = computed(() => {
   const calcCyR = {
-    cy: parseFloat((dimensions.value.height / circleAdjustments.value.cYOffset).toFixed(2)),
-    r: parseFloat((dimensions.value.width / circleAdjustments.value.radiusOffset).toFixed(2)),
+    cy: parseFloat((dimensions.value.height / circleAdjustments.value.cYOffset).toFixed(2)) / strokeWidth.value * 2,
+    r: parseFloat((dimensions.value.width / circleAdjustments.value.radiusOffset).toFixed(2)) / strokeWidth.value * 2,
   }
 
   const target = {

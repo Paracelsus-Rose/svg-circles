@@ -35,5 +35,8 @@
     "node": "^18 || ^16 || ^14.19",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
+  },
+    "stackblitz": {
+    "startCommand": "quasar dev"
   }
 }
