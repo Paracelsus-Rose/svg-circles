@@ -34,9 +34,9 @@ const visible = useVModel(props, 'visible', emit)
           <q-slider
             v-model="circleAdjustments.targetCxOffset"
             color="green"
-            :min="1"
-            :step="1"
-            :max="20"
+            :min="0.1"
+            :step="0.1"
+            :max="5"
           />
         </div>
         <div class="q-px-md q-pb-md">
@@ -44,9 +44,9 @@ const visible = useVModel(props, 'visible', emit)
           <q-slider
             v-model="circleAdjustments.destinationCxOffset"
             color="green"
-            :min="1"
-            :step="1"
-            :max="20"
+            :min="0.1"
+            :step="0.1"
+            :max="5"
           />
         </div>
         <div class="q-px-md q-pb-md">
