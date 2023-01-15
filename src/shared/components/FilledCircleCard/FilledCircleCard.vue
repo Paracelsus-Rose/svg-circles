@@ -37,12 +37,12 @@ const filledCircleVals = computed(() => {
   }
 
   const target = {
-    cx: circleAdjustments.value.radiusOffset * 4 + 2.2,
+    cx: parseFloat((circleAdjustments.value.radiusOffset * 4 + 2.2).toFixed(2)),
     ...calcCyR,
   }
 
   const destination = {
-    cx: circleAdjustments.value.radiusOffset * 4 + 2.2,
+    cx: parseFloat((circleAdjustments.value.radiusOffset * 4 + 2.2).toFixed(2)),
     ...calcCyR,
   }
 
